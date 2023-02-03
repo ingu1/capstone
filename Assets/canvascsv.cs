@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class canvascsv : MonoBehaviour
 {
     Text text;
     float mass;
+    float time;
+    float impulse;
+    float force;
 
-    int i = 9;
     Rigidbody rigid;
+    float velop = 0;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +28,35 @@ public class canvascsv : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = rigid.velocity.ToString();
-
-
+        //text.text = rigid.velocity.ToString() + "\n";
+        //text.text = "";
+        text.text = "질량 : " + rigid.mass.ToString() + " kg";
+        text.text += "\n충돌 전 속도 : " + velop + " m/s^2";
+        text.text += "\n충돌 후 속도 : " + rigid.velocity.z + " m/s^2";
+        text.text += "\n충돌시간 :  " + time + " 초";
+        text.text += "\n충격량 : " + impulse + " Ns";
+        text.text += "\n힘 : " + force + "N";
     }
+
+    public void Set_velop()
+    {
+        UnityEngine.Debug.Log("나왔냐?");
+       
+    }
+
+    public void Set_time(float ti)
+    {
+        time = ti;
+    }
+
+    public void Set_impulse(float imp)
+    {
+        impulse = imp;
+    }
+
+    public void Set_force(float fo)
+    {
+        force = fo;
+    }
+
 }
