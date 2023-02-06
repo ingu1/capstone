@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
 using static canvascsv;
+using UnityEngine.UI;
 
 
 public class carscr : MonoBehaviour
@@ -11,10 +12,11 @@ public class carscr : MonoBehaviour
     float dTime;
     float start;
     float end;
-    Rigidbody rigid;
+    public Rigidbody rigid = new Rigidbody();
     public GameObject wall;
 
-   
+    Text text;
+
     //public punchKingscr wall;
     Vector3 vec = new Vector3(0, 0, 1);
     // Start is called before the first frame update
@@ -24,14 +26,15 @@ public class carscr : MonoBehaviour
     float impulse = 0;
     float force = 0;
 
-    canvascsv canvas;
+    public canvascsv canvas;
 
     void Start()
     {
         //wall.GetComponent<punchKingscr>().get_time();
         canvas = GetComponent<canvascsv>();
+        text = GameObject.Find("Canvas").GetComponent<Text>();
 
-         rigid = GetComponent<Rigidbody>();
+        rigid = GetComponent<Rigidbody>();
         float density = 10;      //밀도
         rigid.mass = transform.localScale.x * transform.localScale.y * transform.localScale.z * density;
         //질량
@@ -49,12 +52,12 @@ public class carscr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+   
         if (Input.GetKeyDown(KeyCode.W))
         {
             rigid.velocity += 20 * Vector3.forward;
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.S))
             rigid.velocity += -20 * Vector3.forward;
 
         //if (rigid.velocity.z > velop)
@@ -103,13 +106,26 @@ public class carscr : MonoBehaviour
         UnityEngine.Debug.Log("충격량 : " + impulse + " Ns");
         UnityEngine.Debug.Log("힘 : " + force + "N");
 
-        //캔버스 세팅
+
+
+
+
+        text.text = "질량 : " + rigid.mass.ToString() + " kg";
+        text.text += "\n충돌 전 속도 : " + velop + " m/s^2";
+        text.text += "\n충돌 후 속도 : " + rigid.velocity.z + " m/s^2";
+        text.text += "\n충돌시간 :  " + time + " 초";
+        text.text += "\n충격량 : " + impulse + " Ns";
+        text.text += "\n힘 : " + force + "N";
+
+        /*
+        //캔버스 하고싶은... 세팅
         canvas.Set_velop();
         canvas.Set_force(this.force);
         canvas.Set_impulse(this.impulse);
         canvas.Set_time(this.time);
-        
-
+       
+        canvas.Set_rigid(this.rigid);
+        */
         // float kinetic = 1 / 2 * rigid.mass * (velop - rigid.velocity.z) * (velop - rigid.velocity.z);
         velop = 0;
         //  UnityEngine.Debug.Log("운동에너지 : " + kinetic + " J");        
