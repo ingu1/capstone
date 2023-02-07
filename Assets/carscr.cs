@@ -35,8 +35,8 @@ public class carscr : MonoBehaviour
         text = GameObject.Find("Canvas").GetComponent<Text>();
 
         rigid = GetComponent<Rigidbody>();
-        float density = 10;      //밀도
-        rigid.mass = transform.localScale.x * transform.localScale.y * transform.localScale.z * density;
+        float density = 1000;      //밀도
+     //   rigid.mass = transform.localScale.x * transform.localScale.y * transform.localScale.z * density;
         //질량
 
 
