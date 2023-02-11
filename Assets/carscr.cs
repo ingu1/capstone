@@ -155,5 +155,5 @@ public class carscr : MonoBehaviour
         rigid.velocity += 20 * Vector3.forward;
 
     }
-
+    //시발 왜 안되냐고
 }
