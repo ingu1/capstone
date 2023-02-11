@@ -14,6 +14,10 @@ public class carscr : MonoBehaviour
     float end;
     public Rigidbody rigid = new Rigidbody();
     public GameObject wall;
+    public Vector3 startpos;
+    public Vector3 startrot;
+    public InputField input_mass;
+    public InputField input_velocity;
 
     Text text;
 
@@ -31,17 +35,20 @@ public class carscr : MonoBehaviour
     void Start()
     {
         //wall.GetComponent<punchKingscr>().get_time();
-        canvas = GetComponent<canvascsv>();
-        text = GameObject.Find("Canvas").GetComponent<Text>();
+        // canvas = GetComponent<canvascsv>();
+        // text = GameObject.Find("Canvas").GetComponent<Text>();
+        //input_velocity = GameObject.Find("InputMass").GetComponent<InputField>();
 
         rigid = GetComponent<Rigidbody>();
         float density = 1000;      //밀도
-     //   rigid.mass = transform.localScale.x * transform.localScale.y * transform.localScale.z * density;
-        //질량
+                                   //   rigid.mass = transform.localScale.x * transform.localScale.y * transform.localScale.z * density;
+                                   //질량
 
 
-        //density 소수로 하면 반올림 해야 될지도...
-       
+
+        startpos = transform.position;
+        startrot = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+
 
     }
     private void FixedUpdate()
@@ -52,7 +59,7 @@ public class carscr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-   
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             rigid.velocity += 20 * Vector3.forward;
@@ -98,15 +105,16 @@ public class carscr : MonoBehaviour
         float force = impulse / time;    //힘
 
 
-       
-        UnityEngine.Debug.Log("질량 : " + rigid.mass + " kg");
-        UnityEngine.Debug.Log("충돌 전 속도 : " + velop + " m/s^2");
-        UnityEngine.Debug.Log("충돌 후 속도 : " + rigid.velocity.z + " m/s^2");
-        UnityEngine.Debug.Log("충돌시간 :  " + time + " 초");
-        UnityEngine.Debug.Log("충격량 : " + impulse + " Ns");
-        UnityEngine.Debug.Log("힘 : " + force + "N");
+        /*
+         UnityEngine.Debug.Log("질량 : " + rigid.mass + " kg");
+         UnityEngine.Debug.Log("충돌 전 속도 : " + velop + " m/s^2");
+         UnityEngine.Debug.Log("충돌 후 속도 : " + rigid.velocity.z + " m/s^2");
+         UnityEngine.Debug.Log("충돌시간 :  " + time + " 초");
+         UnityEngine.Debug.Log("충격량 : " + impulse + " Ns");
+         UnityEngine.Debug.Log("힘 : " + force + "N");
+        */
 
-
+        UnityEngine.Debug.Log(transform.rotation);
 
 
 
@@ -130,8 +138,22 @@ public class carscr : MonoBehaviour
         velop = 0;
         //  UnityEngine.Debug.Log("운동에너지 : " + kinetic + " J");        
     }
-    public float Get_velop()
+
+    public void Reset_car()
     {
-        return velop;
+        transform.position = startpos;
+        transform.rotation = new(0, 0, 0, 0);
+        rigid.velocity = Vector3.zero;
+        rigid.angularVelocity = Vector3.zero;
+        text.text = "";
+        UnityEngine.Debug.Log(input_velocity.text);
+
     }
+
+    public void Start_car()
+    {
+        rigid.velocity += 20 * Vector3.forward;
+
+    }
+
 }
