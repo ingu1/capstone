@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
-using static canvascsv;
 using UnityEngine.UI;
 
 
@@ -27,12 +26,10 @@ public class carscr : MonoBehaviour
     float impulse = 0;
     float force = 0;
 
-    public canvascsv canvas;
 
     void Start()
     {
         //wall.GetComponent<punchKingscr>().get_time();
-        canvas = GetComponent<canvascsv>();
         text = GameObject.Find("Canvas").GetComponent<Text>();
 
         rigid = GetComponent<Rigidbody>();
