@@ -19,8 +19,12 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Scene
 <<<<<<< Updated upstream
+=======
+  m_Title: Game
+>>>>>>> parent of 76132bf (#복구하기!!!)
   m_RootView: {fileID: 2}
 =======
   m_RootView: {fileID: 6}
@@ -267,7 +271,7 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
 >>>>>>> Stashed changes
   vertical: 0
-  controlID: 63
+  controlID: 64
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -287,12 +291,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1179.2
+    width: 1173.6
     height: 722.8
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 64
+  controlID: 65
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -312,12 +316,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1179.2
+    width: 1173.6
     height: 491.2
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 65
+  controlID: 66
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -335,10 +339,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 286.4
+    width: 290.4
     height: 491.2
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -354,15 +358,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 286.4
+=======
+    x: 290.4
+>>>>>>> parent of 76132bf (#복구하기!!!)
     y: 0
-    width: 892.7999
+    width: 883.19995
     height: 491.2
 =======
     x: 290.4
@@ -372,13 +380,13 @@ MonoBehaviour:
 >>>>>>> Stashed changes
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 12}
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -396,17 +404,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 491.2
-    width: 1179.2
+    width: 1173.6
     height: 231.59998
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
   m_Panes:
+  - {fileID: 16}
   - {fileID: 17}
-  - {fileID: 12}
-  - {fileID: 18}
   m_Selected: 1
-  m_LastSelected: 2
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -417,23 +424,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1179.2
+    x: 1173.6
     y: 0
-    width: 356.80005
+    width: 362.40002
     height: 722.8
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 19}
-  - {fileID: 20}
+  - {fileID: 18}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -442,10 +448,11 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_MinSize: {x: 100, y: 100}
 =======
@@ -591,13 +598,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MinSize: {x: 275, y: 50}
 >>>>>>> Stashed changes
+=======
+  m_MinSize: {x: 455, y: 354}
+>>>>>>> parent of 76132bf (#복구하기!!!)
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Asset Store
+    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 0
     y: 564.8
@@ -609,6 +620,12 @@ MonoBehaviour:
     width: 361.40002
     height: 701.8
 >>>>>>> Stashed changes
+=======
+    x: 290.4
+    y: 73.6
+    width: 881.19995
+    height: 470.2
+>>>>>>> parent of 76132bf (#복구하기!!!)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -635,8 +652,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     width: 285.4
+=======
+    width: 289.4
+>>>>>>> parent of 76132bf (#복구하기!!!)
     height: 470.2
 =======
     width: 289.4
@@ -649,6 +670,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       m_SelectedIDs: 1a5b0000
       m_LastClickedID: 23322
@@ -658,6 +680,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: 36fbffff
 >>>>>>> Stashed changes
+=======
+      m_SelectedIDs: 125a0000
+      m_LastClickedID: 23058
+      m_ExpandedIDs: 4aabffffe0b4ffff7ec8ffff84c8ffff36fbffff125a00001e5a0000
+>>>>>>> parent of 76132bf (#복구하기!!!)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -673,7 +700,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 11}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -701,10 +728,14 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 286.4
+=======
+    x: 290.4
+>>>>>>> parent of 76132bf (#복구하기!!!)
     y: 73.6
-    width: 890.7999
+    width: 881.19995
     height: 470.2
 =======
     x: 290.4
@@ -913,6 +944,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     m_Target: {x: 268.18527, y: 234.57014, z: -48.105083}
     speed: 2
@@ -922,6 +954,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.8146829, y: 4.438419, z: -10.125614}
 >>>>>>> Stashed changes
+=======
+    m_Target: {x: 295.3626, y: 225.6901, z: 105.89266}
+    speed: 2
+    m_Value: {x: 295.3626, y: 225.6901, z: 105.89266}
+>>>>>>> parent of 76132bf (#복구하기!!!)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -968,6 +1005,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     m_Target: {x: -0.03576146, y: -0.1133746, z: 0.0040750625, w: -0.9929164}
     speed: 2
@@ -977,10 +1015,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.10500359, y: 0.5881875, z: -0.07738248, w: -0.7981364}
 >>>>>>> Stashed changes
-  m_Size:
-    m_Target: 240.41049
+=======
+    m_Target: {x: -0.11970288, y: -0.013394272, z: 0.0016161179, w: -0.99273145}
     speed: 2
-    m_Value: 240.41049
+    m_Value: {x: -0.119701296, y: -0.013394095, z: 0.0016160965, w: -0.99271834}
+>>>>>>> parent of 76132bf (#복구하기!!!)
+  m_Size:
+    m_Target: 273.8396
+    speed: 2
+    m_Value: 273.8396
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1025,10 +1068,14 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 286.4
+=======
+    x: 290.4
+>>>>>>> parent of 76132bf (#복구하기!!!)
     y: 73.6
-    width: 890.7999
+    width: 881.19995
     height: 470.2
 =======
     x: 290.4
@@ -1046,11 +1093,15 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   m_TargetSize: {x: 890.7999, y: 449.2}
 =======
   m_TargetSize: {x: 881.19995, y: 386}
 >>>>>>> Stashed changes
+=======
+  m_TargetSize: {x: 881.19995, y: 449.2}
+>>>>>>> parent of 76132bf (#복구하기!!!)
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1065,9 +1116,14 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     m_HBaseRangeMin: -356.31998
     m_HBaseRangeMax: 356.31998
+=======
+    m_HBaseRangeMin: -352.47998
+    m_HBaseRangeMax: 352.47998
+>>>>>>> parent of 76132bf (#복구하기!!!)
     m_VBaseRangeMin: -179.68001
     m_VBaseRangeMax: 179.68001
 =======
@@ -1093,6 +1149,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       width: 890.7999
       height: 449.2
@@ -1104,19 +1161,30 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 440.59998, y: 193}
 >>>>>>> Stashed changes
+=======
+      width: 881.19995
+      height: 449.2
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 440.59998, y: 224.6}
+>>>>>>> parent of 76132bf (#복구하기!!!)
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       x: -445.39996
+=======
+      x: -440.59998
+>>>>>>> parent of 76132bf (#복구하기!!!)
       y: -224.6
-      width: 890.7999
+      width: 881.19995
       height: 449.2
     m_MinimalGUI: 1
   m_defaultScale: 1
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1113.4999, y: 587.75}
 =======
       x: -440.59998
@@ -1127,40 +1195,15 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1101.5, y: 508.75}
 >>>>>>> Stashed changes
+=======
+  m_LastWindowPixelSize: {x: 1101.5, y: 587.75}
+>>>>>>> parent of 76132bf (#복구하기!!!)
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 --- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 455, y: 354}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Asset Store
-    m_Image: {fileID: -7444545952099596278, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 290.4
-    y: 73.6
-    width: 881.19995
-    height: 470.2
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
---- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1183,7 +1226,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< Updated upstream
     y: 564.8
-    width: 1178.2
+    width: 1172.6
     height: 210.59998
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1215,9 +1258,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca5b0000
-    m_LastClickedID: 23498
-    m_ExpandedIDs: 000000004e5c0000
+    m_SelectedIDs: b65a0000
+    m_LastClickedID: 23222
+    m_ExpandedIDs: 00000000b65a0000b85a0000be5a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1245,7 +1288,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e5c0000
+    m_ExpandedIDs: 00000000b65a0000b85a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1270,8 +1313,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9a5a0000
-    m_LastClickedInstanceID: 23194
+    m_SelectedInstanceIDs: 4aabffff
+    m_LastClickedInstanceID: -21686
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000805b000000000000cc5a0000
     m_RenameOverlay:
@@ -1301,7 +1344,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &18
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1309,28 +1352,27 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6629f1bb292b749a18b5fff7994c8b19, type: 3}
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 600, y: 350}
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Plastic SCM
-    m_Image: {fileID: 0}
+    m_Text: Console
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
     y: 564.8
-    width: 1178.2
+    width: 1172.6
     height: 210.59998
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  mForceToOpen: 0
---- !u!114 &19
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1350,9 +1392,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1179.2001
+    x: 1173.6
     y: 73.6
-    width: 355.80005
+    width: 361.40002
     height: 701.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1371,6 +1413,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
+<<<<<<< HEAD
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1404,3 +1447,5 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
+=======
+>>>>>>> parent of 76132bf (#복구하기!!!)
