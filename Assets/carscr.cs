@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
-using static canvascsv;
 using UnityEngine.UI;
 
 
@@ -16,34 +15,36 @@ public class carscr : MonoBehaviour
     public GameObject wall;
     public Vector3 startpos;
     public Vector3 startrot;
+    public InputField input_mass;
+    public InputField input_velocity;
+
     Text text;
 
-    //public punchKingscr wall;
     Vector3 vec = new Vector3(0, 0, 1);
-    // Start is called before the first frame update
 
     float velop = 0;
     float time = 0;
     float impulse = 0;
     float force = 0;
-
-    public canvascsv canvas;
-
+    public Transform transform;
+    
+    // Start is called before the first frame update
     void Start()
     {
         //wall.GetComponent<punchKingscr>().get_time();
-        canvas = GetComponent<canvascsv>();
         text = GameObject.Find("Canvas").GetComponent<Text>();
+       
+        input_velocity = GameObject.Find("InputMass").GetComponent<InputField>();
 
-        rigid = GetComponent<Rigidbody>();
+        rigid = GameObject.Find("Hypercar").GetComponent<Rigidbody>();
+
         float density = 1000;      //¹Ðµµ
-                                   //   rigid.mass = transform.localScale.x * transform.localScale.y * transform.localScale.z * density;
-                                   //Áú·®
 
+        transform = GameObject.Find("Hypercar").GetComponent<Transform>();
 
 
         startpos = transform.position;
-        startrot = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z); 
+        startrot = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 
 
     }
@@ -110,7 +111,6 @@ public class carscr : MonoBehaviour
          UnityEngine.Debug.Log("Èû : " + force + "N");
         */
 
-        UnityEngine.Debug.Log(transform.rotation);
 
 
 
@@ -138,10 +138,17 @@ public class carscr : MonoBehaviour
     public void Reset_car()
     {
         transform.position = startpos;
-        transform.rotation = new (0, 0, 0, 0);
+        transform.rotation = new(0, 0, 0, 0);
         rigid.velocity = Vector3.zero;
         rigid.angularVelocity = Vector3.zero;
         text.text = "";
 
     }
+
+    public void Start_car()
+    {
+        rigid.velocity += 20 * Vector3.forward;
+
+    }
+
 }
