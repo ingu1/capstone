@@ -14,13 +14,10 @@ public class carscr : MonoBehaviour
     float end;
     public Rigidbody rigid = new Rigidbody();
     public GameObject wall;
-<<<<<<< HEAD
     public Vector3 startpos;
     public Vector3 startrot;
     public InputField input_mass;
     public InputField input_velocity;
-=======
->>>>>>> parent of 32d025e (#resetë²„íŠ¼ êµ¬í˜„)
 
     Text text;
 
@@ -48,15 +45,12 @@ public class carscr : MonoBehaviour
         //Áú·®
 
 
-<<<<<<< HEAD
 
         startpos = transform.position;
         startrot = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 
-=======
         //density ¼Ò¼ö·Î ÇÏ¸é ¹Ý¿Ã¸² ÇØ¾ß µÉÁöµµ...
        
->>>>>>> parent of 32d025e (#resetë²„íŠ¼ êµ¬í˜„)
 
     }
     private void FixedUpdate()
@@ -147,7 +141,6 @@ public class carscr : MonoBehaviour
     }
     public float Get_velop()
     {
-<<<<<<< HEAD
         transform.position = startpos;
         transform.rotation = new(0, 0, 0, 0);
         rigid.velocity = Vector3.zero;
@@ -155,9 +148,7 @@ public class carscr : MonoBehaviour
         text.text = "";
         UnityEngine.Debug.Log(input_velocity.text);
 
-=======
         return velop;
->>>>>>> parent of 32d025e (#resetë²„íŠ¼ êµ¬í˜„)
     }
 
     public void Start_car()
