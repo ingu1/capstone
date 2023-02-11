@@ -124,6 +124,7 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &72520555
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +715,8 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 =======
 >>>>>>> parent of 32d025e (#reset버튼 구현)
+=======
+>>>>>>> parent of 32d025e (#reset버튼 구현)
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1158,7 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &998214560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,6 +1404,8 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 =======
 >>>>>>> parent of 32d025e (#reset버튼 구현)
+=======
+>>>>>>> parent of 32d025e (#reset버튼 구현)
 --- !u!1 &1083858397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,6 +1535,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 0.15, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &1100059180
 GameObject:
@@ -1800,6 +1807,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123795741}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> parent of 32d025e (#reset버튼 구현)
 =======
 >>>>>>> parent of 32d025e (#reset버튼 구현)
 --- !u!1 &1127143664
@@ -2347,12 +2356,15 @@ MonoBehaviour:
   rigid: {fileID: 0}
   wall: {fileID: 965908983}
 <<<<<<< HEAD
+<<<<<<< HEAD
   startpos: {x: 0, y: 0, z: 0}
   startrot: {x: 0, y: 0, z: 0}
   input_mass: {fileID: 0}
   input_velocity: {fileID: 0}
   canvas: {fileID: 0}
 =======
+=======
+>>>>>>> parent of 32d025e (#reset버튼 구현)
   canvas: {fileID: 1728389999}
 >>>>>>> parent of 32d025e (#reset버튼 구현)
 --- !u!64 &1362099424
@@ -2465,11 +2477,15 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 1965028715}
   - {fileID: 72520556}
   - {fileID: 998214561}
   - {fileID: 2029161922}
   - {fileID: 1344206573}
+=======
+  - {fileID: 1796936250}
+>>>>>>> parent of 32d025e (#reset버튼 구현)
 =======
   - {fileID: 1796936250}
 >>>>>>> parent of 32d025e (#reset버튼 구현)
@@ -2538,10 +2554,13 @@ MonoBehaviour:
   rigid: {fileID: 0}
   wall: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   startpos: {x: 0, y: 0, z: 0}
   startrot: {x: 0, y: 0, z: 0}
   input_mass: {fileID: 0}
   input_velocity: {fileID: 0}
+=======
+>>>>>>> parent of 32d025e (#reset버튼 구현)
 =======
 >>>>>>> parent of 32d025e (#reset버튼 구현)
   canvas: {fileID: 0}
@@ -2654,6 +2673,7 @@ RectTransform:
   m_LocalScale: {x: 1.3571401, y: 0.7966423, z: 0.59999996}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Father: {fileID: 1219491881}
   m_RootOrder: 0
@@ -2912,6 +2932,11 @@ RectTransform:
   m_Father: {fileID: 1728389995}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_Father: {fileID: 1728389995}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+>>>>>>> parent of 32d025e (#reset버튼 구현)
 =======
   m_Father: {fileID: 1728389995}
   m_RootOrder: 0
