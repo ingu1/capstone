@@ -20,6 +20,7 @@ public class carscr : MonoBehaviour
 
     Text text;
 
+
     Vector3 vec = new Vector3(0, 0, 1);
 
     float velop = 0;
@@ -34,13 +35,15 @@ public class carscr : MonoBehaviour
         //wall.GetComponent<punchKingscr>().get_time();
         text = GameObject.Find("Canvas").GetComponent<Text>();
        
-        input_velocity = GameObject.Find("InputMass").GetComponent<InputField>();
+        input_mass = GameObject.Find("InputMass").GetComponent<InputField>();
 
         rigid = GameObject.Find("Hypercar").GetComponent<Rigidbody>();
 
         float density = 1000;      //¹Ðµµ
 
         transform = GameObject.Find("Hypercar").GetComponent<Transform>();
+
+        
 
 
         startpos = transform.position;
@@ -142,7 +145,7 @@ public class carscr : MonoBehaviour
         rigid.velocity = Vector3.zero;
         rigid.angularVelocity = Vector3.zero;
         text.text = "";
-
+        input_mass.text = "asd";
     }
 
     public void Start_car()
