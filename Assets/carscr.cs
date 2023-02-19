@@ -145,7 +145,6 @@ public class carscr : MonoBehaviour
         rigid.velocity = Vector3.zero;
         rigid.angularVelocity = Vector3.zero;
         text.text = "";
-        input_mass.text = "asd";
     }
 
     public void Start_car()
