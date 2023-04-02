@@ -45,4 +45,7 @@ public class wallscr : MonoBehaviour
         }
 
     }
+
+
+
 }

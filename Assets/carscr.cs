@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
 using UnityEngine.UI;
+using System.IO;
 
 
 public class carscr : MonoBehaviour
@@ -28,7 +29,8 @@ public class carscr : MonoBehaviour
     float impulse = 0;
     float force = 0;
     public Transform transform;
-    
+    string icpPth = "Assets/ICPResult/";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +45,7 @@ public class carscr : MonoBehaviour
 
         transform = GameObject.Find("Hypercar").GetComponent<Transform>();
 
-        
+
 
 
         startpos = transform.position;
@@ -117,12 +119,18 @@ public class carscr : MonoBehaviour
 
 
 
-        text.text = "질량 : " + rigid.mass.ToString() + " kg";
+        text.text = "질량 : " + rigid.mass + " kg";
         text.text += "\n충돌 전 속도 : " + velop + " m/s^2";
         text.text += "\n충돌 후 속도 : " + rigid.velocity.z + " m/s^2";
         text.text += "\n충돌시간 :  " + time + " 초";
         text.text += "\n충격량 : " + impulse + " Ns";
         text.text += "\n힘 : " + force + "N";
+
+
+
+        save_data(rigid.mass, velop, impulse);
+
+
 
         /*
         //캔버스 하고싶은... 세팅
@@ -150,6 +158,20 @@ public class carscr : MonoBehaviour
     public void Start_car()
     {
         rigid.velocity += 20 * Vector3.forward;
+
+    }
+
+
+
+    public void save_data(float mass, float velop,float impact )
+    {
+        StreamWriter sw = File.AppendText(icpPth + "asd_" + ".txt");
+        sw.WriteLine(mass + ", " + velop + ", " + impact);
+
+        sw.Flush();
+        sw.Close();
+
+
 
     }
 

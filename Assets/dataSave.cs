@@ -40,12 +40,30 @@ public class dataSave : MonoBehaviour
 
     public void save_data()
     {
-        StreamWriter sw = new StreamWriter(icpPth +  "asd_" + ".txt");
+        /*
+        StreamReader reader = new StreamReader(icpPth + "asd_" + ".txt");
+     
+        FileInfo fileInfo = new FileInfo(icpPth + "asd_" + ".txt");
+            string value = "";
 
+            if (fileInfo.Exists)
+            {
+                value = reader.ReadToEnd();
+                reader.Close();
+            }
+        */
+        StreamWriter sw = File.AppendText(icpPth + "asd_" + ".txt");
         sw.WriteLine("dat");
-        sw.WriteLine("dataaa");
+        sw.WriteLine("sex");
         sw.Flush();
         sw.Close();
+
+
+
     }
+
+
+
+
 
 }
