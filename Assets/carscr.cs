@@ -4,8 +4,8 @@ using UnityEngine;
 using System.Diagnostics;
 using UnityEngine.UI;
 using System.IO;
-
-
+using System.Threading;
+using System.Collections;
 public class carscr : MonoBehaviour
 {
     public Stopwatch watch = new Stopwatch();
@@ -31,14 +31,16 @@ public class carscr : MonoBehaviour
     public Transform transform;
     string icpPth = "Assets/ICPResult/";
 
+
+    public Slider sli;
+
+
     // Start is called before the first frame update
     void Start()
     {
         //wall.GetComponent<punchKingscr>().get_time();
         text = GameObject.Find("Canvas").GetComponent<Text>();
        
-        input_mass = GameObject.Find("InputMass").GetComponent<InputField>();
-
         rigid = GameObject.Find("Hypercar").GetComponent<Rigidbody>();
 
         float density = 1000;      //밀도
@@ -52,7 +54,13 @@ public class carscr : MonoBehaviour
         startrot = new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 
 
+        sli = GameObject.Find("Slider").GetComponent<Slider>();
+
     }
+
+
+
+
     private void FixedUpdate()
     {
         dTime += Time.deltaTime;
@@ -73,9 +81,10 @@ public class carscr : MonoBehaviour
         //  velop = rigid.velocity.z;
 
         //transform.position += -vec * Time.deltaTime * 10;
+
     }
 
-
+        
     private void OnCollisionEnter(Collision collision)
     {
 
@@ -161,8 +170,6 @@ public class carscr : MonoBehaviour
 
     }
 
-
-
     public void save_data(float mass, float velop,float impact )
     {
         StreamWriter sw = File.AppendText(icpPth + "asd_" + ".txt");
@@ -171,8 +178,45 @@ public class carscr : MonoBehaviour
         sw.Flush();
         sw.Close();
 
+    }
+
+
+    public void push_start()
+    {
+        Reset_car();
+
+        StartCoroutine(DoSomething());
+
+
+
+    }
+    private IEnumerator DoSomething()
+    {
+
+        yield return new WaitForSeconds(2f);
+
+
+        rigid.velocity += sli.value * Vector3.forward;
+
 
 
     }
 
+    /*
+     //파일 생성하는 메소드
+    public void create_file()
+    {
+        int n = 0;
+        do
+        {
+            if (false == File.Exists(icpPth +  "asd_"  + ".txt"))
+            {
+                var file = File.CreateText(icpPth +  "asd_" + ".txt");
+                file.Close();
+                break;
+            }
+            else n++;
+        } while (true);
+    }
+   */
 }
