@@ -127,14 +127,14 @@ public class carscr : MonoBehaviour
 
 
 
-
+        /*
         text.text = "질량 : " + rigid.mass + " kg";
         text.text += "\n충돌 전 속도 : " + velop + " m/s^2";
         text.text += "\n충돌 후 속도 : " + rigid.velocity.z + " m/s^2";
         text.text += "\n충돌시간 :  " + time + " 초";
         text.text += "\n충격량 : " + impulse + " Ns";
         text.text += "\n힘 : " + force + "N";
-
+        */
 
 
         save_data(rigid.mass, velop, impulse);
@@ -173,7 +173,7 @@ public class carscr : MonoBehaviour
     public void save_data(float mass, float velop,float impact )
     {
         StreamWriter sw = File.AppendText(icpPth + "asd_" + ".txt");
-        sw.WriteLine(mass + ", " + velop + ", " + impact);
+        sw.WriteLine("Hyper, " + mass + ", " + velop + ", " + impact);
 
         sw.Flush();
         sw.Close();
