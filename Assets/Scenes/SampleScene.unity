@@ -1087,7 +1087,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
 --- !u!114 &657447518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3025,6 +3025,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4076624602536883768, guid: 111b35f8de4ac224fac79cad29bd6c8f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076624602536883768, guid: 111b35f8de4ac224fac79cad29bd6c8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -3034,7 +3038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4076624602536883768, guid: 111b35f8de4ac224fac79cad29bd6c8f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.99
+      value: -10.12
       objectReference: {fileID: 0}
     - target: {fileID: 4076624602536883768, guid: 111b35f8de4ac224fac79cad29bd6c8f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3299,7 +3303,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!64 &1362099424
 MeshCollider:
@@ -3340,6 +3344,78 @@ MonoBehaviour:
   input_velocity: {fileID: 0}
   transform: {fileID: 1362099427}
   sli: {fileID: 0}
+--- !u!114 &1362099429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362099418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0498d8a7fa5fe42d992da6fe6457d687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsTest: 0
+  Status: 2
+  Message: Invalid HTTP Method
+  Responce:
+    user_id: 0
+    user_name: 
+    power_ratio: 0
+    game_data:
+      game_version: 0
+      parameter: 
+  id: 
+--- !u!114 &1362099430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362099418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94adba2d97a7e4446a618bc3eb4b7a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsTest: 0
+  Status: 2
+  Message: Invalid HTTP Method
+  Responce:
+    str_value: 
+    str_values: []
+    int_value: 0
+    int_values: 
+    long_value: 0
+    long_values: 
+    float_value: 0
+    float_values: []
+    double_value: 0
+    double_values: []
+    bool_value: 0
+    bool_values: 
+    class_value:
+      id: 0
+      name: 
+    class_values: []
+  get_value: 
+  post_value: 
+--- !u!114 &1362099431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362099418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d0b748bdd2740569de660cb980fd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsTest: 0
+  Status: 2
+  Message: 404 Not Found
 --- !u!1001 &1548516848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3350,6 +3426,10 @@ PrefabInstance:
     - target: {fileID: 294524058105349696, guid: 221684c5dd8d52340980e377cd3d22e5, type: 3}
       propertyPath: m_Name
       value: Military
+      objectReference: {fileID: 0}
+    - target: {fileID: 294524058105349696, guid: 221684c5dd8d52340980e377cd3d22e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1107195833752575226, guid: 221684c5dd8d52340980e377cd3d22e5, type: 3}
       propertyPath: m_RootOrder

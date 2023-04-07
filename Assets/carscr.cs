@@ -35,12 +35,22 @@ public class carscr : MonoBehaviour
     public Slider sli;
 
 
+
+    GameObject myGameObject;
+    Collider myCollider;
+
+
+    Vector3 size;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+
         //wall.GetComponent<punchKingscr>().get_time();
         text = GameObject.Find("Canvas").GetComponent<Text>();
-       
+
         rigid = GameObject.Find("Hypercar").GetComponent<Rigidbody>();
 
         float density = 1000;      //밀도
@@ -56,6 +66,17 @@ public class carscr : MonoBehaviour
 
         sli = GameObject.Find("Slider").GetComponent<Slider>();
 
+
+
+
+        ////////////////////////
+        // GameObject와 Collider를 초기화합니다.
+        myGameObject = GameObject.Find("Hypercar");
+        myCollider = myGameObject.GetComponent<Collider>();
+
+
+        // Collider의 크기를 얻습니다.
+
     }
 
 
@@ -64,6 +85,10 @@ public class carscr : MonoBehaviour
     private void FixedUpdate()
     {
         dTime += Time.deltaTime;
+
+
+        size = myCollider.bounds.size;
+        UnityEngine.Debug.Log(rigid.position.z);
 
     }
     // Update is called once per frame
@@ -84,7 +109,7 @@ public class carscr : MonoBehaviour
 
     }
 
-        
+
     private void OnCollisionEnter(Collision collision)
     {
 
@@ -100,6 +125,8 @@ public class carscr : MonoBehaviour
         start = dTime;
         //      velop = rigid.velocity.z;
         velop = Vector3.Magnitude(collision.relativeVelocity);  //벡터 크기
+
+
 
     }
     private void OnCollisionExit(Collision collision)
@@ -169,36 +196,44 @@ public class carscr : MonoBehaviour
         rigid.velocity += 20 * Vector3.forward;
 
     }
-
-    public void save_data(float mass, float velop,float impact )
+    //miliscr도 수정해야 되는데 그냥 나중에 한번에 하자!!!!
+    public void save_data(float mass, float velop, float impact)
     {
+
+        StartCoroutine(save_data2(mass,velop,impact));
+    }
+
+    private IEnumerator save_data2(float mass, float velop, float impact)
+    {
+        //2초로 했지만 조금 수정해서 최적화 하면 좋을듯
+        yield return new WaitForSeconds(2f);
+
         StreamWriter sw = File.AppendText(icpPth + "asd_" + ".txt");
-        sw.WriteLine("Hyper, " + mass + ", " + velop + ", " + impact);
+
+
+            sw.WriteLine("Hyper, " + mass + ", " + velop + ", " + impact + ", " + (6.11 - rigid.position.z)); //6.11 = 차의 앞대가리 거리
+
+
 
         sw.Flush();
         sw.Close();
 
     }
-
-
     public void push_start()
     {
         Reset_car();
 
-        StartCoroutine(DoSomething());
+
+        StartCoroutine(add_velocity(2f));
 
 
 
     }
-    private IEnumerator DoSomething()
+    private IEnumerator add_velocity(float delay)
     {
 
-        yield return new WaitForSeconds(2f);
-
-
+        yield return new WaitForSeconds(delay);
         rigid.velocity += sli.value * Vector3.forward;
-
-
 
     }
 

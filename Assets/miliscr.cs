@@ -161,7 +161,7 @@ public class miliscr : MonoBehaviour
         transform.rotation = new(0, 0, 0, 0);
         rigid.velocity = Vector3.zero;
         rigid.angularVelocity = Vector3.zero;
-        text.text = "";
+        //text.text = "";
     }
 
     public void Start_car()
@@ -197,7 +197,6 @@ public class miliscr : MonoBehaviour
 
 
         rigid.velocity += sli.value * Vector3.forward;
-
 
 
     }
