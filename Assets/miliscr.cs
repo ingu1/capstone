@@ -21,6 +21,7 @@ public class miliscr : MonoBehaviour
 
     Text text;
 
+    bool check = true;
 
     Vector3 vec = new Vector3(0, 0, 1);
 
@@ -73,6 +74,7 @@ public class miliscr : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             rigid.velocity += 20 * Vector3.forward;
+            check = true;
         }
         else if (Input.GetKeyDown(KeyCode.S))
             rigid.velocity += -20 * Vector3.forward;
@@ -172,6 +174,11 @@ public class miliscr : MonoBehaviour
 
     public void save_data(float mass, float velop, float impact)
     {
+        if (!check)
+            return;
+
+        check = false;
+
         StreamWriter sw = File.AppendText(icpPth + "asd_" + ".txt");
         sw.WriteLine("Mili, "+mass + ", " + velop + ", " + impact);
 
@@ -187,7 +194,7 @@ public class miliscr : MonoBehaviour
 
         StartCoroutine(DoSomething());
 
-
+        check = true;
 
     }
     private IEnumerator DoSomething()

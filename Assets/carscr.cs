@@ -88,7 +88,6 @@ public class carscr : MonoBehaviour
 
 
         size = myCollider.bounds.size;
-        UnityEngine.Debug.Log(rigid.position.z);
 
     }
     // Update is called once per frame
